@@ -45,7 +45,7 @@ public class VideoGamesAndCrimes extends SparkInitializer {
 
     private static JavaPairRDD<String, Double> getCrimesDataYearsCount() {
         JavaRDD<String> crimesLines =
-                SparkInitializer.sparkContext.textFile("C:\\dataset\\VideoGamesAndSuicide\\Crime_Data_from_2010_to_Present.csv");
+                SparkInitializer.sparkContext.textFile("C:\\datastewardship_datasets\\LA_Crime_Data_from_2010_to_Present.csv");
 
         crimesLines.cache();
         String crimesHeader = crimesLines.first();
@@ -65,7 +65,7 @@ public class VideoGamesAndCrimes extends SparkInitializer {
 
     private static JavaPairRDD<String, Double> getGroupedActionGamesPerYear() {
         JavaRDD<String> videoGamesLines =
-                SparkInitializer.sparkContext.textFile("C:\\dataset\\VideoGamesAndSuicide\\VideoGames.csv");
+                SparkInitializer.sparkContext.textFile("C:\\datastewardship_datasets\\Video_Games_Sales.csv");
         videoGamesLines.cache();
         String videoGamesHeader = videoGamesLines.first();
         JavaRDD<String> videoGamesData = videoGamesLines

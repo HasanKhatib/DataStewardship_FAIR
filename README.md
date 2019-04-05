@@ -1,13 +1,9 @@
-# DataStewardship_FAIR Repository - Data Science Correlation Experiments
+# Data Science Correlation Experiment - Correlation between LA Crimes and Museum Visitors
 
 This repository aims to share some data science experiments on open datasets in order to show some correlatiosn between them. Basically, this repo has been established for the cause of Data Stewardship course in TUWien, Vienna.
 
-Those experiments were performed using Java 11.0 with Apache Spark 2.4 "It's a Maven project, so don't worry about versions".
-
-
-## Correlating The Crime Rate in LA to the Number of Museums Visitors Per Year
-
-### Getting Started
+## Getting Started
+This experiment was performed using Java 11.0 with Apache Spark 2.4 "It's a Maven project, so don't worry about versions".
 
 ### Prerequisites
 * [Dataset Repository](https://bitbucket.org/hasanalkhatib/datastewardship_datasets/src)

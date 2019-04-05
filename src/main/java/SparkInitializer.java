@@ -4,7 +4,6 @@ import org.apache.spark.api.java.JavaSparkContext;
 abstract class SparkInitializer {
     public static SparkConf conf = null;
     public static JavaSparkContext sparkContext = null;
-    public static String country = "france";
 
     public static void initialize() {
         conf = new SparkConf();

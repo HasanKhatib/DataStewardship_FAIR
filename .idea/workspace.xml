@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9f5b356f-55bd-4b28-a053-ca72cef6669e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/DataSetAnalyzer.java" afterDir="false" />
+    <list default="true" id="9f5b356f-55bd-4b28-a053-ca72cef6669e" name="Default Changelist" comment="FINISHED Analyzing the correlation between video games and crimes in LA. &#10;Data will be uploaded to bitbucket and described in the readme. the resulted graph also will be there.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/LAMuseumVisitorsAndCrimes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DataSetAnalyzer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SparkInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SparkInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SuicideAndWorldCup.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/VideoGamesAndCrimes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/VideoGamesAndCrimes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/data-stewardship.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SparkInitializer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SuicideAndWorldCup$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SuicideAndWorldCup$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SuicideAndWorldCup.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/VideoGamesAndCrimes.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/VideoGamesAndCrimes.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -21,7 +27,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1474">
+            <state relative-caret-position="358">
               <caret line="78" selection-start-line="78" selection-end-line="78" />
               <folding>
                 <element signature="n#build#0;n#project#0;n#!!top" />
@@ -31,10 +37,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/SuicideAndWorldCup.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/SparkInitializer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1100">
-              <caret line="64" selection-start-line="54" selection-start-column="8" selection-end-line="64" />
+            <state relative-caret-position="132">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -43,24 +49,30 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/SparkInitializer.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/VideoGamesAndCrimes.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="185">
+              <caret line="52" column="122" selection-start-line="52" selection-start-column="58" selection-end-line="52" selection-end-column="122" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#getGroupedActionGamesPerYear#0;class#VideoGamesAndCrimes#0" />
+                <element signature="method#DrawChart#0;class#VideoGamesAndCrimes#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/VideoGamesAndCrimes.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/LAMuseumVisitorsAndCrimes.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1210">
-              <caret line="55" column="35" lean-forward="true" selection-start-line="55" selection-start-column="35" selection-end-line="55" selection-end-column="35" />
+            <state relative-caret-position="88">
+              <caret line="124" column="53" lean-forward="true" selection-start-line="124" selection-start-column="53" selection-end-line="124" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#getGroupsMuseumVisitorsPerYear#0;class#LAMuseumVisitorsAndCrimes#0" />
+                <element signature="docComment;method#DrawChart#0;class#LAMuseumVisitorsAndCrimes#0" />
+                <element signature="e#4838#4846#0" expanded="true" />
+                <element signature="e#5295#5303#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -75,22 +87,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/DataSetAnalyzer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -103,6 +106,9 @@
       <find>sparkContext.</find>
       <find>country</find>
       <find>Action</find>
+      <find>videoGamesLines</find>
+      <find>crimesData</find>
+      <find>crimesDataYears</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -111,16 +117,18 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/java/VideoGamesAndCrimes.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/LAMuseumVisitorsAndCrimes.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/SparkInitializer.java" />
         <option value="$PROJECT_DIR$/src/main/java/SuicideAndWorldCup.java" />
         <option value="$PROJECT_DIR$/src/main/java/DataSetAnalyzer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/SparkInitializer.java" />
         <option value="$PROJECT_DIR$/src/main/java/VideoGamesAndCrimes.java" />
+        <option value="$PROJECT_DIR$/src/main/java/LAMuseumVisitorsAndCrimes.java" />
       </list>
     </option>
   </component>
@@ -179,11 +187,11 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554262297071" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554423143505" />
     <property name="last_opened_file_path" value="C:/Program Files/Git/bin/git.exe" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -202,7 +210,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.VideoGamesAndCrimes">
+  <component name="RunManager" selected="Application.LAMuseumVisitorsAndCrimes">
+    <configuration name="LAMuseumVisitorsAndCrimes" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="LAMuseumVisitorsAndCrimes" />
+      <module name="data-stewardship" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SuicideAndWorldCup" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="SuicideAndWorldCup" />
       <module name="data-stewardship" />
@@ -219,6 +234,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.LAMuseumVisitorsAndCrimes" />
         <item itemvalue="Application.VideoGamesAndCrimes" />
         <item itemvalue="Application.SuicideAndWorldCup" />
       </list>
@@ -239,26 +255,36 @@
       <workItem from="1553674612294" duration="11830000" />
       <workItem from="1554073283554" duration="5485000" />
       <workItem from="1554085308350" duration="7584000" />
-      <workItem from="1554364416894" duration="3430000" />
+      <workItem from="1554364416894" duration="11297000" />
     </task>
+    <task id="LOCAL-00001" summary="FINISHED Analyzing the correlation between video games and crimes in LA. &#10;Data will be uploaded to bitbucket and described in the readme. the resulted graph also will be there.">
+      <created>1554374654323</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1554374654323</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29833000" />
+    <option name="totallyTimeSpent" value="37700000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2685325" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.2677761" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Duplicate detector" weight="0.32850242" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32045087" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.52334946" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -266,7 +292,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49848714" weight="0.32850242" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49924356" weight="0.33172303" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49924356" weight="0.048309177" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5015129" side_tool="true" weight="0.32850242" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Messages" order="13" weight="0.32850242" />
@@ -284,6 +310,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="FINISHED Analyzing the correlation between video games and crimes in LA. &#10;Data will be uploaded to bitbucket and described in the readme. the resulted graph also will be there." />
+    <option name="LAST_COMMIT_MESSAGE" value="FINISHED Analyzing the correlation between video games and crimes in LA. &#10;Data will be uploaded to bitbucket and described in the readme. the resulted graph also will be there." />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.base/java/io/File.java">
@@ -325,36 +355,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1474">
-          <caret line="78" selection-start-line="78" selection-end-line="78" />
-          <folding>
-            <element signature="n#build#0;n#project#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SuicideAndWorldCup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1100">
-          <caret line="64" selection-start-line="54" selection-start-column="8" selection-end-line="64" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SparkInitializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-core_2.12/2.4.0/spark-core_2.12-2.4.0.jar!/org/apache/spark/api/java/JavaPairRDD.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="13706">
@@ -369,12 +369,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/VideoGamesAndCrimes.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/SparkInitializer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1210">
-          <caret line="55" column="35" lean-forward="true" selection-start-line="55" selection-start-column="35" selection-end-line="55" selection-end-column="35" />
+        <state relative-caret-position="132">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/SuicideAndWorldCup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="650">
+          <caret line="46" column="115" selection-start-line="46" selection-start-column="108" selection-end-line="46" selection-end-column="115" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="78" selection-start-line="78" selection-end-line="78" />
+          <folding>
+            <element signature="n#build#0;n#project#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/VideoGamesAndCrimes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="52" column="122" selection-start-line="52" selection-start-column="58" selection-end-line="52" selection-end-column="122" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getGroupedActionGamesPerYear#0;class#VideoGamesAndCrimes#0" />
+            <element signature="method#DrawChart#0;class#VideoGamesAndCrimes#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/LAMuseumVisitorsAndCrimes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="124" column="53" lean-forward="true" selection-start-line="124" selection-start-column="53" selection-end-line="124" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getGroupsMuseumVisitorsPerYear#0;class#LAMuseumVisitorsAndCrimes#0" />
+            <element signature="docComment;method#DrawChart#0;class#LAMuseumVisitorsAndCrimes#0" />
+            <element signature="e#4838#4846#0" expanded="true" />
+            <element signature="e#5295#5303#0" expanded="true" />
           </folding>
         </state>
       </provider>

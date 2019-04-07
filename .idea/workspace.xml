@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9f5b356f-55bd-4b28-a053-ca72cef6669e" name="Default Changelist" comment="FINISHED Analyzing the correlation between video games and crimes in LA. &#10;Data will be uploaded to bitbucket and described in the readme. the resulted graph also will be there.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/LAMuseumVisitorsAndCrimes.java" afterDir="false" />
+    <list default="true" id="9f5b356f-55bd-4b28-a053-ca72cef6669e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/target/classes/LAMuseumVisitorsAndCrimes$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/LAMuseumVisitorsAndCrimes.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/data-stewardship.kotlin_module" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DataSetAnalyzer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/LAMuseumVisitorsAndCrimes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LAMuseumVisitorsAndCrimes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/SparkInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SparkInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SuicideAndWorldCup.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/VideoGamesAndCrimes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/VideoGamesAndCrimes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/SparkInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SparkInitializer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SuicideAndWorldCup$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SuicideAndWorldCup$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SuicideAndWorldCup.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/VideoGamesAndCrimes.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/VideoGamesAndCrimes.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -21,6 +18,20 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -39,24 +50,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/SparkInitializer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            <state>
+              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/VideoGamesAndCrimes.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="52" column="122" selection-start-line="52" selection-start-column="58" selection-end-line="52" selection-end-column="122" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#getGroupedActionGamesPerYear#0;class#VideoGamesAndCrimes#0" />
-                <element signature="method#DrawChart#0;class#VideoGamesAndCrimes#0" />
               </folding>
             </state>
           </provider>
@@ -65,24 +62,28 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/LAMuseumVisitorsAndCrimes.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="124" column="53" lean-forward="true" selection-start-line="124" selection-start-column="53" selection-end-line="124" selection-end-column="53" />
+            <state relative-caret-position="165">
+              <caret line="205" column="5" selection-start-line="205" selection-start-column="5" selection-end-line="205" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="docComment;method#getCrimesCountPerYear#0;class#LAMuseumVisitorsAndCrimes#0" />
+                <element signature="method#getCrimesCountPerYear#0;class#LAMuseumVisitorsAndCrimes#0" />
+                <element signature="docComment;method#getGroupsMuseumVisitorsPerYear#0;class#LAMuseumVisitorsAndCrimes#0" />
                 <element signature="method#getGroupsMuseumVisitorsPerYear#0;class#LAMuseumVisitorsAndCrimes#0" />
                 <element signature="docComment;method#DrawChart#0;class#LAMuseumVisitorsAndCrimes#0" />
-                <element signature="e#4838#4846#0" expanded="true" />
-                <element signature="e#5295#5303#0" expanded="true" />
+                <element signature="method#DrawChart#0;class#LAMuseumVisitorsAndCrimes#0" />
+                <element signature="e#5068#5076#0" expanded="true" />
+                <element signature="e#5253#5261#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-core_2.12/2.4.0/spark-core_2.12-2.4.0.jar!/org/apache/spark/api/java/JavaPairRDD.class">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/knowm/xchart/xchart/3.5.4/xchart-3.5.4.jar!/org/knowm/xchart/XYChart.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="13706">
-              <caret line="642" selection-start-line="642" selection-end-line="642" />
+            <state relative-caret-position="126">
+              <caret line="81" column="20" selection-start-line="81" selection-start-column="20" selection-end-line="81" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -107,8 +108,13 @@
       <find>country</find>
       <find>Action</find>
       <find>videoGamesLines</find>
-      <find>crimesData</find>
       <find>crimesDataYears</find>
+      <find>crimesData</find>
+      <find>VideoGamesAndSuicide</find>
+      <find>dataset</find>
+      <find>&quot;C:\\dataset\</find>
+      <find>:\\dataset</find>
+      <find>datastewardship_datasets</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -126,8 +132,8 @@
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/SuicideAndWorldCup.java" />
         <option value="$PROJECT_DIR$/src/main/java/DataSetAnalyzer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/SparkInitializer.java" />
         <option value="$PROJECT_DIR$/src/main/java/VideoGamesAndCrimes.java" />
+        <option value="$PROJECT_DIR$/src/main/java/SparkInitializer.java" />
         <option value="$PROJECT_DIR$/src/main/java/LAMuseumVisitorsAndCrimes.java" />
       </list>
     </option>
@@ -141,7 +147,6 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
-    <option name="y" value="-8" />
     <option name="width" value="1382" />
     <option name="height" value="754" />
   </component>
@@ -165,19 +170,6 @@
               <item name="DataStewardship_FAIR" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="datastewardship" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DataStewardship_FAIR" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="datastewardship" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DataStewardship_FAIR" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -187,10 +179,13 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554423143505" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554657148589" />
     <property name="last_opened_file_path" value="C:/Program Files/Git/bin/git.exe" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
@@ -255,7 +250,7 @@
       <workItem from="1553674612294" duration="11830000" />
       <workItem from="1554073283554" duration="5485000" />
       <workItem from="1554085308350" duration="7584000" />
-      <workItem from="1554364416894" duration="11297000" />
+      <workItem from="1554364416894" duration="25573000" />
     </task>
     <task id="LOCAL-00001" summary="FINISHED Analyzing the correlation between video games and crimes in LA. &#10;Data will be uploaded to bitbucket and described in the readme. the resulted graph also will be there.">
       <created>1554374654323</created>
@@ -264,17 +259,31 @@
       <option name="project" value="LOCAL" />
       <updated>1554374654323</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added new scenario, Correlation between LA crimes and number of museum visitors in LA.">
+      <created>1554423155913</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1554423155913</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added new scenario, Correlation between LA crimes and number of museum visitors in LA.">
+      <created>1554425808416</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1554425808416</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37700000" />
+    <option name="totallyTimeSpent" value="51976000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.2677761" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.19742814" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -284,7 +293,7 @@
       <window_info anchor="bottom" id="Duplicate detector" weight="0.32850242" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.52334946" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.34621578" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -292,19 +301,19 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49848714" weight="0.32850242" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49924356" weight="0.048309177" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49924356" weight="0.29307568" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5015129" side_tool="true" weight="0.32850242" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Messages" order="13" weight="0.32850242" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24962178" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24962178" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Theme Preview" order="4" />
       <window_info anchor="right" id="Maven" order="5" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Database" order="8" />
+      <window_info anchor="right" id="Database" order="8" weight="0.32980332" />
       <window_info anchor="right" id="Bean Validation" order="9" />
     </layout>
   </component>
@@ -313,7 +322,12 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="FINISHED Analyzing the correlation between video games and crimes in LA. &#10;Data will be uploaded to bitbucket and described in the readme. the resulted graph also will be there." />
-    <option name="LAST_COMMIT_MESSAGE" value="FINISHED Analyzing the correlation between video games and crimes in LA. &#10;Data will be uploaded to bitbucket and described in the readme. the resulted graph also will be there." />
+    <MESSAGE value="Added new scenario, Correlation between LA crimes and number of museum visitors in LA." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added new scenario, Correlation between LA crimes and number of museum visitors in LA." />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.base/java/io/File.java">
@@ -355,27 +369,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-core_2.12/2.4.0/spark-core_2.12-2.4.0.jar!/org/apache/spark/api/java/JavaPairRDD.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13706">
-          <caret line="642" selection-start-line="642" selection-end-line="642" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/DataSetAnalyzer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SparkInitializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -399,28 +396,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-core_2.12/2.4.0/spark-core_2.12-2.4.0.jar!/org/apache/spark/api/java/JavaPairRDD.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="642" selection-start-line="642" selection-end-line="642" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/VideoGamesAndCrimes.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="52" column="122" selection-start-line="52" selection-start-column="58" selection-end-line="52" selection-end-column="122" />
+        <state relative-caret-position="181">
+          <caret line="47" column="58" selection-start-line="47" selection-start-column="58" selection-end-line="47" selection-end-column="58" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#getGroupedActionGamesPerYear#0;class#VideoGamesAndCrimes#0" />
             <element signature="method#DrawChart#0;class#VideoGamesAndCrimes#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/LAMuseumVisitorsAndCrimes.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/SparkInitializer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="124" column="53" lean-forward="true" selection-start-line="124" selection-start-column="53" selection-end-line="124" selection-end-column="53" />
+        <state>
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/knowm/xchart/xchart/3.5.4/xchart-3.5.4.jar!/org/knowm/xchart/XYChart.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="81" column="20" selection-start-line="81" selection-start-column="20" selection-end-line="81" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/LAMuseumVisitorsAndCrimes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="205" column="5" selection-start-line="205" selection-start-column="5" selection-end-line="205" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#getCrimesCountPerYear#0;class#LAMuseumVisitorsAndCrimes#0" />
+            <element signature="method#getCrimesCountPerYear#0;class#LAMuseumVisitorsAndCrimes#0" />
+            <element signature="docComment;method#getGroupsMuseumVisitorsPerYear#0;class#LAMuseumVisitorsAndCrimes#0" />
             <element signature="method#getGroupsMuseumVisitorsPerYear#0;class#LAMuseumVisitorsAndCrimes#0" />
             <element signature="docComment;method#DrawChart#0;class#LAMuseumVisitorsAndCrimes#0" />
-            <element signature="e#4838#4846#0" expanded="true" />
-            <element signature="e#5295#5303#0" expanded="true" />
+            <element signature="method#DrawChart#0;class#LAMuseumVisitorsAndCrimes#0" />
+            <element signature="e#5068#5076#0" expanded="true" />
+            <element signature="e#5253#5261#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -428,6 +452,77 @@
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>11</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>data-stewardship</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: cglib:cglib-nodep:2.2</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="ScopeChooserConfigurable.UI">
         <settings>
           <splitter-proportions>

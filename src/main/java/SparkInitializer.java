@@ -13,6 +13,5 @@ abstract class SparkInitializer {
 
         sparkContext = new JavaSparkContext(conf);
         sparkContext.setLogLevel("ERROR");
-
     }
 }

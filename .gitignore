@@ -1,3 +1,5 @@
 ./*.csv
 ./*/*.csv
 *.csv
+datastewardship_datasets/
+datastewardship_datasets/*

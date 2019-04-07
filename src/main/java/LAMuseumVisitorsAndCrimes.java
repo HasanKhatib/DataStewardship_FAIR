@@ -2,13 +2,12 @@ import ch.lambdaj.Lambda;
 import org.apache.spark.api.java.JavaPairRDD;
 import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.function.PairFunction;
-import org.knowm.xchart.CategoryChart;
-import org.knowm.xchart.CategoryChartBuilder;
-import org.knowm.xchart.SwingWrapper;
+import org.knowm.xchart.*;
 import org.knowm.xchart.style.Styler;
 import org.spark_project.guava.collect.Iterables;
 import scala.Tuple2;
 
+import java.io.*;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -34,6 +33,7 @@ public class LAMuseumVisitorsAndCrimes extends SparkInitializer {
                 .sorted(Map.Entry.comparingByKey())
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue,
                         (oldValue, newValue) -> oldValue, LinkedHashMap::new));
+
 
         DrawChart(mapMusuemVisitors, mapCrimesCount);
     }
@@ -99,6 +99,43 @@ public class LAMuseumVisitorsAndCrimes extends SparkInitializer {
 
     }
 
+
+    public static void DrawLines(Map<String, Double> firstDS, Map<String, Double> secondDS){
+        //Just printing it out
+        System.out.println("Museum Visitors DS");
+        firstDS.forEach((k, v) -> System.out.println(k + ": " + v));
+        System.out.println("Incedents DS");
+        secondDS.forEach((k, v) -> System.out.println(k + ": " + v));
+
+        double[] museumVisitorsYears = firstDS.keySet().stream().mapToDouble(year -> Double.parseDouble(year)).toArray();
+        double[] museumVisitorsSum = firstDS.values().stream().mapToDouble(Double::doubleValue).toArray();
+
+        double[] crimesYears = secondDS.keySet().stream().mapToDouble(year -> Double.parseDouble(year)).toArray();
+        double[] crimesIncedentsSum = secondDS.values().stream().mapToDouble(Double::doubleValue).toArray();
+
+        //Export data to csv
+        //exportToCSV(museumVisitorsYears, museumVisitorsSum, crimesYears, crimesIncedentsSum);
+
+        //Normalize data to simplify the chart
+        IntStream.range(0, museumVisitorsSum.length)
+                .forEach(i -> museumVisitorsSum[i]= museumVisitorsSum[i] / 1000);
+        IntStream.range(0, crimesIncedentsSum.length)
+                .forEach(i -> crimesIncedentsSum[i] = crimesIncedentsSum[i] / 1000);
+        // Create Chart
+        XYChart chart = new XYChartBuilder().width(800).height(600)
+                .title("Correlation between Museum Visitors in LA and Crimes committed in LA")
+                .xAxisTitle("Years")
+                .yAxisTitle("Count Number")
+                .theme(Styler.ChartTheme.XChart).build();
+
+        // Series
+        chart.addSeries("Museum Visitors in LA", museumVisitorsYears, museumVisitorsSum);
+        chart.addSeries("Crimes in LA (# in Thousands)", crimesYears, crimesIncedentsSum);
+
+        new SwingWrapper<XYChart>(chart).displayChart();
+//        new SwingWrapper<CategoryChart>(chart).displayChart();
+    }
+
     /**
      * 1st Museum Visitors
      * 2nd Crimes
@@ -111,15 +148,19 @@ public class LAMuseumVisitorsAndCrimes extends SparkInitializer {
         secondDS.forEach((k, v) -> System.out.println(k + ": " + v));
 
         ArrayList<String> museumVisitorsYears = new ArrayList<>(firstDS.keySet());
-        ArrayList<Double> museumVisitorsSum = new ArrayList<Double>(firstDS.values());
-        IntStream.range(0, museumVisitorsSum.size())
-                .forEach(i -> museumVisitorsSum.set(i, museumVisitorsSum.get(i) / 1000));
+        ArrayList<Number> museumVisitorsSum = new ArrayList<Number>(firstDS.values());
 
         ArrayList<String> crimesYears = new ArrayList<>(secondDS.keySet());
-        ArrayList<Double> crimesIncedentsSum = new ArrayList<Double>(secondDS.values());
-        IntStream.range(0, crimesIncedentsSum.size())
-                .forEach(i -> crimesIncedentsSum.set(i, crimesIncedentsSum.get(i) / 1000));
+        ArrayList<Number> crimesIncedentsSum = new ArrayList<Number>(secondDS.values());
 
+        //Export data to csv
+        exportToCSV(museumVisitorsYears, museumVisitorsSum, crimesYears, crimesIncedentsSum);
+
+        //Normalize data to simplify the chart
+        IntStream.range(0, museumVisitorsSum.size())
+                .forEach(i -> museumVisitorsSum.set(i, museumVisitorsSum.get(i).doubleValue() / 1000));
+        IntStream.range(0, crimesIncedentsSum.size())
+                .forEach(i -> crimesIncedentsSum.set(i, crimesIncedentsSum.get(i).doubleValue() / 1000));
         // Create Chart
         CategoryChart chart = new CategoryChartBuilder().width(800).height(600)
                 .title("Correlation between Action Games sold in NA and Crimes in LA")
@@ -132,6 +173,35 @@ public class LAMuseumVisitorsAndCrimes extends SparkInitializer {
         chart.addSeries("Crimes in LA (# in Thousands)", crimesYears, crimesIncedentsSum);
 
         new SwingWrapper<CategoryChart>(chart).displayChart();
+//        new SwingWrapper<CategoryChart>(chart).displayChart();
     }
 
+
+
+    private static void exportToCSV(ArrayList<String> museumVisitorsYears,
+                                    ArrayList<Number> museumVisitorsSum,
+                                    ArrayList<String> crimesYears,
+                                    ArrayList<Number> crimesIncedentsSum) {
+        try (Writer writer = new BufferedWriter(new OutputStreamWriter(
+                new FileOutputStream("result.csv"), "utf-8"))) {
+            museumVisitorsYears = (ArrayList<String>) museumVisitorsYears
+                    .stream()
+                    .map(line->line.concat("_museum"))
+                    .collect(Collectors.toList());
+            crimesYears = (ArrayList<String>) crimesYears
+                    .stream()
+                    .map(line->line.concat("_crime"))
+                    .collect(Collectors.toList());
+            writer.write(String.join(",",museumVisitorsYears) + "," + String.join(",",crimesYears));
+            writer.write("\n");
+            writer.write(String.join(",",museumVisitorsSum.stream().map(num-> ""+num).collect(Collectors.toList()))
+                    + ","+ String.join(",",crimesIncedentsSum.stream().map(num-> ""+num).collect(Collectors.toList())));
+        } catch (UnsupportedEncodingException e) {
+            System.out.println(e.getMessage());
+        } catch (FileNotFoundException e) {
+            System.out.println(e.getMessage());
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+    }
 }

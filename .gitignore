@@ -2,11 +2,7 @@
 ./*/*.csv
 *.csv
 
-datastewardship_datasets/
-datastewardship_datasets/*
-
-laexperiment_data/
-laexperiment_data/*
+laexperiment_data/*.csv
 
 target/*
 target/

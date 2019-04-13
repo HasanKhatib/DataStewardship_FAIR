@@ -44,7 +44,7 @@ public class LAMuseumVisitorsAndCrimes extends SparkInitializer {
      */
     private static JavaPairRDD<String, Double> getCrimesCountPerYear() {
         JavaRDD<String> crimesLines =
-                SparkInitializer.sparkContext.textFile("datastewardship_datasets\\LAexperiment\\LA_Crime_Data_from_2010_to_Present.csv");
+                SparkInitializer.sparkContext.textFile("laexperiment_data\\LA_Crime_Data_from_2010_to_Present.csv");
 
         crimesLines.cache();
         String crimesHeader = crimesLines.first();
@@ -71,7 +71,7 @@ public class LAMuseumVisitorsAndCrimes extends SparkInitializer {
      */
     private static JavaPairRDD<String, Double> getGroupsMuseumVisitorsPerYear() {
         JavaRDD<String> museumVisitorsLines =
-                SparkInitializer.sparkContext.textFile("datastewardship_datasets\\LAexperiment\\LA_museum_visitors.csv");
+                SparkInitializer.sparkContext.textFile("laexperiment_data\\LA_museum_visitors.csv");
         museumVisitorsLines.cache();
         String museumVisitorsHeader = museumVisitorsLines.first();
         JavaRDD<String> museumVisitorsData = museumVisitorsLines

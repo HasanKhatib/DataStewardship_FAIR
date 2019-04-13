@@ -11,11 +11,12 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class LAMuseumVisitorsAndCrimes extends SparkInitializer {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         initialize();
 
         JavaPairRDD<String, Double> groupedMuseumVisitorsPerYear = getGroupsMuseumVisitorsPerYear();
@@ -43,7 +44,7 @@ public class LAMuseumVisitorsAndCrimes extends SparkInitializer {
      */
     private static JavaPairRDD<String, Double> getCrimesCountPerYear() {
         JavaRDD<String> crimesLines =
-                SparkInitializer.sparkContext.textFile("C:\\datastewardship_datasets\\LA_Crime_Data_from_2010_to_Present.csv");
+                SparkInitializer.sparkContext.textFile("datastewardship_datasets\\LAexperiment\\LA_Crime_Data_from_2010_to_Present.csv");
 
         crimesLines.cache();
         String crimesHeader = crimesLines.first();
@@ -64,12 +65,13 @@ public class LAMuseumVisitorsAndCrimes extends SparkInitializer {
         return crimesDataYearsGrouped.mapValues(yearsList -> (double) Iterables.size(yearsList));
     }
 
-    /**
+    /***
      * return pairs of year and number of museums visitors in this year in LA
+     * @return
      */
     private static JavaPairRDD<String, Double> getGroupsMuseumVisitorsPerYear() {
         JavaRDD<String> museumVisitorsLines =
-                SparkInitializer.sparkContext.textFile("C:\\datastewardship_datasets\\LA_museum_visitors.csv");
+                SparkInitializer.sparkContext.textFile("datastewardship_datasets\\LAexperiment\\LA_museum_visitors.csv");
         museumVisitorsLines.cache();
         String museumVisitorsHeader = museumVisitorsLines.first();
         JavaRDD<String> museumVisitorsData = museumVisitorsLines
@@ -99,8 +101,12 @@ public class LAMuseumVisitorsAndCrimes extends SparkInitializer {
 
     }
 
-
-    public static void DrawLines(Map<String, Double> firstDS, Map<String, Double> secondDS){
+    /***
+     *
+     * @param firstDS
+     * @param secondDS
+     */
+    public static void DrawLines(Map<String, Double> firstDS, Map<String, Double> secondDS) {
         //Just printing it out
         System.out.println("Museum Visitors DS");
         firstDS.forEach((k, v) -> System.out.println(k + ": " + v));
@@ -118,7 +124,7 @@ public class LAMuseumVisitorsAndCrimes extends SparkInitializer {
 
         //Normalize data to simplify the chart
         IntStream.range(0, museumVisitorsSum.length)
-                .forEach(i -> museumVisitorsSum[i]= museumVisitorsSum[i] / 1000);
+                .forEach(i -> museumVisitorsSum[i] = museumVisitorsSum[i] / 1000);
         IntStream.range(0, crimesIncedentsSum.length)
                 .forEach(i -> crimesIncedentsSum[i] = crimesIncedentsSum[i] / 1000);
         // Create Chart
@@ -136,11 +142,12 @@ public class LAMuseumVisitorsAndCrimes extends SparkInitializer {
 //        new SwingWrapper<CategoryChart>(chart).displayChart();
     }
 
-    /**
-     * 1st Museum Visitors
-     * 2nd Crimes
+    /***
+     *
+     * @param firstDS: Museum Visitors
+     * @param secondDS: Crimes
      */
-    public static void DrawChart(Map<String, Double> firstDS, Map<String, Double> secondDS) {
+    public static void DrawChart(Map<String, Double> firstDS, Map<String, Double> secondDS) throws Exception {
         //Just printing it out
         System.out.println("Museum Visitors DS");
         firstDS.forEach((k, v) -> System.out.println(k + ": " + v));
@@ -176,26 +183,38 @@ public class LAMuseumVisitorsAndCrimes extends SparkInitializer {
 //        new SwingWrapper<CategoryChart>(chart).displayChart();
     }
 
-
-
-    private static void exportToCSV(ArrayList<String> museumVisitorsYears,
-                                    ArrayList<Number> museumVisitorsSum,
-                                    ArrayList<String> crimesYears,
-                                    ArrayList<Number> crimesIncedentsSum) {
+    /***
+     *
+     * @param museumVisitorsYears
+     * @param museumVisitorsSum
+     * @param crimesYears
+     * @param crimesIncedentsSum
+     */
+    private static void exportToCSV
+    (ArrayList<String> museumVisitorsYears,
+     ArrayList<Number> museumVisitorsSum,
+     ArrayList<String> crimesYears,
+     ArrayList<Number> crimesIncedentsSum) throws Exception {
         try (Writer writer = new BufferedWriter(new OutputStreamWriter(
                 new FileOutputStream("result.csv"), "utf-8"))) {
-            museumVisitorsYears = (ArrayList<String>) museumVisitorsYears
-                    .stream()
-                    .map(line->line.concat("_museum"))
-                    .collect(Collectors.toList());
-            crimesYears = (ArrayList<String>) crimesYears
-                    .stream()
-                    .map(line->line.concat("_crime"))
-                    .collect(Collectors.toList());
-            writer.write(String.join(",",museumVisitorsYears) + "," + String.join(",",crimesYears));
+            if (!museumVisitorsYears.containsAll(crimesYears))
+                throw new Exception("Generated data has incompatable years!");
+
+            AtomicInteger counter = new AtomicInteger(0);
+
+            writer.write("Year,LACrimesCount,LAMuseumVisitorsCount");
             writer.write("\n");
-            writer.write(String.join(",",museumVisitorsSum.stream().map(num-> ""+num).collect(Collectors.toList()))
-                    + ","+ String.join(",",crimesIncedentsSum.stream().map(num-> ""+num).collect(Collectors.toList())));
+            crimesYears.stream()
+                    .forEach(year -> {
+                        try {
+
+                            writer.write(year + "," + crimesIncedentsSum.get(counter.get()) + "," + museumVisitorsSum.get(counter.get()));
+                            writer.write("\n");
+                            counter.addAndGet(1);
+                        } catch (IOException e) {
+                            System.out.println(e.getMessage());
+                        }
+                    });
         } catch (UnsupportedEncodingException e) {
             System.out.println(e.getMessage());
         } catch (FileNotFoundException e) {

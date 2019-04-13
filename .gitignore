@@ -1,5 +1,15 @@
 ./*.csv
 ./*/*.csv
 *.csv
+
 datastewardship_datasets/
 datastewardship_datasets/*
+
+laexperiment_data/
+laexperiment_data/*
+
+target/*
+target/
+
+.idea/
+.idea/*

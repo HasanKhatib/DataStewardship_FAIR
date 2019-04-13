@@ -10,10 +10,8 @@ import scala.Tuple2;
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.awt.List;
+import java.util.*;
 import java.util.function.Consumer;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -85,8 +83,11 @@ public class VideoGamesAndCrimes extends SparkInitializer {
 
     }
 
-    //1st Action Games
-    //2nd Crimes
+    /***
+     *
+     * @param firstDS
+     * @param secondDS
+     */
     public static void DrawChart(Map<String, Double> firstDS, Map<String, Double> secondDS) {
         System.out.println("Action Games DS");
         firstDS.forEach((k, v) -> System.out.println(k + ": " + v));

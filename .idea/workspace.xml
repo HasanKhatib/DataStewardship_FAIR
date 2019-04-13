@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f5b356f-55bd-4b28-a053-ca72cef6669e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/target/classes/LAMuseumVisitorsAndCrimes$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/LAMuseumVisitorsAndCrimes.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/data-stewardship.kotlin_module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/LAMuseumVisitorsAndCrimes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LAMuseumVisitorsAndCrimes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SparkInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SparkInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SparkInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SparkInitializer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/VideoGamesAndCrimes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/VideoGamesAndCrimes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/LAMuseumVisitorsAndCrimes$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/LAMuseumVisitorsAndCrimes$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/LAMuseumVisitorsAndCrimes.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/LAMuseumVisitorsAndCrimes.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/VideoGamesAndCrimes.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/VideoGamesAndCrimes.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -38,7 +38,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
+            <state relative-caret-position="1474">
               <caret line="78" selection-start-line="78" selection-end-line="78" />
               <folding>
                 <element signature="n#build#0;n#project#0;n#!!top" />
@@ -50,10 +50,25 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/SparkInitializer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="22">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/VideoGamesAndCrimes.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1034">
+              <caret line="85" selection-start-line="85" selection-end-line="85" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#getCrimesDataYearsCount#0;class#VideoGamesAndCrimes#0" />
+                <element signature="method#getGroupedActionGamesPerYear#0;class#VideoGamesAndCrimes#0" />
+                <element signature="method#DrawChart#0;class#VideoGamesAndCrimes#0" />
               </folding>
             </state>
           </provider>
@@ -62,18 +77,16 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/LAMuseumVisitorsAndCrimes.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="205" column="5" selection-start-line="205" selection-start-column="5" selection-end-line="205" selection-end-column="5" />
+            <state relative-caret-position="248">
+              <caret line="218" column="47" selection-start-line="218" selection-start-column="47" selection-end-line="218" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;method#getCrimesCountPerYear#0;class#LAMuseumVisitorsAndCrimes#0" />
-                <element signature="method#getCrimesCountPerYear#0;class#LAMuseumVisitorsAndCrimes#0" />
                 <element signature="docComment;method#getGroupsMuseumVisitorsPerYear#0;class#LAMuseumVisitorsAndCrimes#0" />
                 <element signature="method#getGroupsMuseumVisitorsPerYear#0;class#LAMuseumVisitorsAndCrimes#0" />
+                <element signature="docComment;method#DrawLines#0;class#LAMuseumVisitorsAndCrimes#0" />
+                <element signature="method#DrawLines#0;class#LAMuseumVisitorsAndCrimes#0" />
                 <element signature="docComment;method#DrawChart#0;class#LAMuseumVisitorsAndCrimes#0" />
-                <element signature="method#DrawChart#0;class#LAMuseumVisitorsAndCrimes#0" />
-                <element signature="e#5068#5076#0" expanded="true" />
-                <element signature="e#5253#5261#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -82,7 +95,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jar://$MAVEN_REPOSITORY$/org/knowm/xchart/xchart/3.5.4/xchart-3.5.4.jar!/org/knowm/xchart/XYChart.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
+            <state relative-caret-position="1364">
               <caret line="81" column="20" selection-start-line="81" selection-start-column="20" selection-end-line="81" selection-end-column="20" />
             </state>
           </provider>
@@ -115,6 +128,7 @@
       <find>&quot;C:\\dataset\</find>
       <find>:\\dataset</find>
       <find>datastewardship_datasets</find>
+      <find>exportToCSV</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -132,8 +146,8 @@
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/SuicideAndWorldCup.java" />
         <option value="$PROJECT_DIR$/src/main/java/DataSetAnalyzer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/VideoGamesAndCrimes.java" />
         <option value="$PROJECT_DIR$/src/main/java/SparkInitializer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/VideoGamesAndCrimes.java" />
         <option value="$PROJECT_DIR$/src/main/java/LAMuseumVisitorsAndCrimes.java" />
       </list>
     </option>
@@ -155,38 +169,19 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="datastewardship" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DataStewardship_FAIR" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="datastewardship" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DataStewardship_FAIR" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554657148589" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555174443727" />
     <property name="last_opened_file_path" value="C:/Program Files/Git/bin/git.exe" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -250,7 +245,9 @@
       <workItem from="1553674612294" duration="11830000" />
       <workItem from="1554073283554" duration="5485000" />
       <workItem from="1554085308350" duration="7584000" />
-      <workItem from="1554364416894" duration="25573000" />
+      <workItem from="1554364416894" duration="26933000" />
+      <workItem from="1555023383439" duration="4749000" />
+      <workItem from="1555174619341" duration="317000" />
     </task>
     <task id="LOCAL-00001" summary="FINISHED Analyzing the correlation between video games and crimes in LA. &#10;Data will be uploaded to bitbucket and described in the readme. the resulted graph also will be there.">
       <created>1554374654323</created>
@@ -277,23 +274,22 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51976000" />
+    <option name="totallyTimeSpent" value="58402000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.19742814" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.22919819" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Duplicate detector" weight="0.32850242" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.34621578" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32850242" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.34621578" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -305,6 +301,7 @@
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5015129" side_tool="true" weight="0.32850242" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Messages" order="13" weight="0.32850242" />
+      <window_info anchor="bottom" id="Duplicate detector" order="14" weight="0.32850242" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24962178" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24962178" />
@@ -369,33 +366,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/DataSetAnalyzer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SuicideAndWorldCup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="46" column="115" selection-start-line="46" selection-start-column="108" selection-end-line="46" selection-end-column="115" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="78" selection-start-line="78" selection-end-line="78" />
-          <folding>
-            <element signature="n#build#0;n#project#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/DataSetAnalyzer.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/SuicideAndWorldCup.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-core_2.12/2.4.0/spark-core_2.12-2.4.0.jar!/org/apache/spark/api/java/JavaPairRDD.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="107">
@@ -403,48 +375,73 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/VideoGamesAndCrimes.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="47" column="58" selection-start-line="47" selection-start-column="58" selection-end-line="47" selection-end-column="58" />
+        <state relative-caret-position="1474">
+          <caret line="78" selection-start-line="78" selection-end-line="78" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#DrawChart#0;class#VideoGamesAndCrimes#0" />
+            <element signature="n#build#0;n#project#0;n#!!top" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/SparkInitializer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="22">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/VideoGamesAndCrimes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1034">
+          <caret line="85" selection-start-line="85" selection-end-line="85" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getCrimesDataYearsCount#0;class#VideoGamesAndCrimes#0" />
+            <element signature="method#getGroupedActionGamesPerYear#0;class#VideoGamesAndCrimes#0" />
+            <element signature="method#DrawChart#0;class#VideoGamesAndCrimes#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/knowm/xchart/xchart/3.5.4/xchart-3.5.4.jar!/org/knowm/xchart/XYChart.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
+        <state relative-caret-position="1364">
           <caret line="81" column="20" selection-start-line="81" selection-start-column="20" selection-end-line="81" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/result.csv">
+      <provider editor-type-id="csv-text-editor" />
+      <provider selected="true" editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3">
+          <column index="0" width="100" />
+          <column index="1" width="276" />
+          <column index="2" width="281" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="22" lean-forward="true" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/LAMuseumVisitorsAndCrimes.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="205" column="5" selection-start-line="205" selection-start-column="5" selection-end-line="205" selection-end-column="5" />
+        <state relative-caret-position="248">
+          <caret line="218" column="47" selection-start-line="218" selection-start-column="47" selection-end-line="218" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;method#getCrimesCountPerYear#0;class#LAMuseumVisitorsAndCrimes#0" />
-            <element signature="method#getCrimesCountPerYear#0;class#LAMuseumVisitorsAndCrimes#0" />
             <element signature="docComment;method#getGroupsMuseumVisitorsPerYear#0;class#LAMuseumVisitorsAndCrimes#0" />
             <element signature="method#getGroupsMuseumVisitorsPerYear#0;class#LAMuseumVisitorsAndCrimes#0" />
+            <element signature="docComment;method#DrawLines#0;class#LAMuseumVisitorsAndCrimes#0" />
+            <element signature="method#DrawLines#0;class#LAMuseumVisitorsAndCrimes#0" />
             <element signature="docComment;method#DrawChart#0;class#LAMuseumVisitorsAndCrimes#0" />
-            <element signature="method#DrawChart#0;class#LAMuseumVisitorsAndCrimes#0" />
-            <element signature="e#5068#5076#0" expanded="true" />
-            <element signature="e#5253#5261#0" expanded="true" />
           </folding>
         </state>
       </provider>

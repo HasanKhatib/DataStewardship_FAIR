@@ -4,9 +4,11 @@ import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.function.PairFunction;
 import org.knowm.xchart.*;
 import org.knowm.xchart.style.Styler;
+import org.knowm.xchart.style.Theme;
 import org.spark_project.guava.collect.Iterables;
 import scala.Tuple2;
 
+import java.awt.*;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -37,6 +39,7 @@ public class LAMuseumVisitorsAndCrimes extends SparkInitializer {
 
 
         DrawChart(mapMusuemVisitors, mapCrimesCount);
+        DrawLines(mapMusuemVisitors, mapCrimesCount);
     }
 
     /**
@@ -129,16 +132,16 @@ public class LAMuseumVisitorsAndCrimes extends SparkInitializer {
                 .forEach(i -> crimesIncedentsSum[i] = crimesIncedentsSum[i] / 1000);
         // Create Chart
         XYChart chart = new XYChartBuilder().width(800).height(600)
-                .title("Correlation between Museum Visitors in LA and Crimes committed in LA")
-                .xAxisTitle("Years")
-                .yAxisTitle("Count Number")
+                .title("Correlation between LA Crimes and Museum Visitors")
+                .xAxisTitle("Year of reading")
+                .yAxisTitle("Crimes & Museum Visitors Count")
                 .theme(Styler.ChartTheme.XChart).build();
 
         // Series
-        chart.addSeries("Museum Visitors in LA", museumVisitorsYears, museumVisitorsSum);
+        chart.addSeries("Museum Visitors in LA (# in Thousands)", museumVisitorsYears, museumVisitorsSum);
         chart.addSeries("Crimes in LA (# in Thousands)", crimesYears, crimesIncedentsSum);
 
-        new SwingWrapper<XYChart>(chart).displayChart();
+        new SwingWrapper<XYChart>(chart).displayChart("Correlation between LA Crimes and Museum Visitors");
 //        new SwingWrapper<CategoryChart>(chart).displayChart();
     }
 
@@ -170,16 +173,16 @@ public class LAMuseumVisitorsAndCrimes extends SparkInitializer {
                 .forEach(i -> crimesIncedentsSum.set(i, crimesIncedentsSum.get(i).doubleValue() / 1000));
         // Create Chart
         CategoryChart chart = new CategoryChartBuilder().width(800).height(600)
-                .title("Correlation between Action Games sold in NA and Crimes in LA")
-                .xAxisTitle("Years")
-                .yAxisTitle("Count Number")
+                .title("Correlation between LA Crimes and Museum Visitors")
+                .xAxisTitle("Year of reading")
+                .yAxisTitle("Crimes & Museum Visitors Count")
                 .theme(Styler.ChartTheme.XChart).build();
 
         // Series
-        chart.addSeries("Museum Visitors in LA", museumVisitorsYears, museumVisitorsSum);
-        chart.addSeries("Crimes in LA (# in Thousands)", crimesYears, crimesIncedentsSum);
+        chart.addSeries("Museum Visitors in LA (# in Thousands)", museumVisitorsYears, museumVisitorsSum).setFillColor(new Color(244, 89, 66));
+        chart.addSeries("Crimes in LA (# in Thousands)", crimesYears, crimesIncedentsSum).setFillColor(new Color(235, 244, 66));
 
-        new SwingWrapper<CategoryChart>(chart).displayChart();
+        new SwingWrapper<CategoryChart>(chart).displayChart("Correlation between LA Crimes and Museum Visitors");
 //        new SwingWrapper<CategoryChart>(chart).displayChart();
     }
 

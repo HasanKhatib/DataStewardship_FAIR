@@ -1,8 +1,4 @@
-./*.csv
-./*/*.csv
 *.csv
-
-laexperiment_data/*.csv
 
 target/*
 target/

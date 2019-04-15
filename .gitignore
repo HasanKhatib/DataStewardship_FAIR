@@ -7,4 +7,4 @@ target/
 .idea/
 .idea/*
 
-src/main/javaVideoGamesAndCrimes.java
+src/main/java/VideoGamesAndCrimes.java

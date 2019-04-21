@@ -2,14 +2,14 @@
 This repository contains an experiment in which I tested the correlation between the Crimes number in LA and the number of Museum Visitors in the same city.
 
 ## Experiment Datasource
-In this experiment I used two datasets from open-access repositories in order to get the information needed for my experiment. Those data sets were:
+n this experiment, I used two datasets from open-access repositories in order to get the information needed for my experiment. Those data sets were:
 1. LA_Crime_Data_from_2010_to_Present.csv
 2. LA_museum_visitors.csv
 
 Both input and generated data were preserved on Zenodo using this DOI citation: [10.5282/dmp.LAexperiment.data](https://doi.org/10.5282/dmp.LAexperiment.data)
 
 ## Prerequisites
-This experiment was performed using JavaSE 11.0 with Apache Spark 2.4 "It's a Maven project, so don't worry about versions". Other libraries were used and will be listed in Prerequisites section.
+This experiment was performed using JavaSE 11.0 with Apache Spark 2.4 "It's a Maven project, so don't worry about versions". Other libraries were used and will be listed in the Prerequisites section.
 
 ## Setup and Running
 In order to setup and run this experiment, you can follow the next steps:
@@ -29,17 +29,18 @@ Or, just download data using the DOI citation from above to `laexperiment_data` 
 4. Run it!
 
 ## Experiment Process
-In the next UML, you will notice the flow of data in the experiment and how the output csv file was generated. In general, the steps of the process were as follows:
-1. Read csv files as arrays of string.
-2. Splitting each line to several data attributes, in some cases I needed to work with regex to split lines that has commas within data attributes.
+In the next UML, you will notice the flow of data in the experiment and how the output CSV file was generated. In general, the steps of the process were as follows:
+1. Read CSV files as arrays of string.
+2. Splitting each line to several data attributes, in some cases I needed to work with regex to split lines that have commas within data attributes.
 3. Filtering data from both datasets to match the period of studying.
-4. Group results by year, and aggrigate data by summing/counting it.
-5. Populate new csv file by writing the data into it.
+4. Group results by year, and aggregate data by summing/counting it.
+5. Populate new CSV file by writing the data into it.
 
 ![Experiment UML](https://user-images.githubusercontent.com/1809095/56473698-06d0b780-646f-11e9-9cf5-0e1db18d56ef.png)
 
 ## Results
-As a result of this experiment, I generated a csv file named `LA_MuseumVisitorsAndCrimes.csv` located in `laexperiment_data\output`. Adding to that, the implementation will generate a chart bar when you run it.
+As a result of this experiment, I generated a CSV file named `LA_MuseumVisitorsAndCrimes.csv` located in `laexperiment_data\output`. Adding to that, the implementation will generate a chart bar when you run it.
+
 ![LAExperiment_chart](https://user-images.githubusercontent.com/1809095/56473803-ba867700-6470-11e9-9812-680a0c126296.png)
 
 

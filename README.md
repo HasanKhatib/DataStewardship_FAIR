@@ -17,7 +17,7 @@ git clone [Dataset Repository URL]
 
 ## Experiment Process
 
-https://user-images.githubusercontent.com/1809095/56473698-06d0b780-646f-11e9-9cf5-0e1db18d56ef.png
+![Experiment UML](https://user-images.githubusercontent.com/1809095/56473698-06d0b780-646f-11e9-9cf5-0e1db18d56ef.png)
 
 
 ## License

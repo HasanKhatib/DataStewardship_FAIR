@@ -80,15 +80,16 @@ public class LAMuseumVisitorsAndCrimes extends SparkInitializer {
         JavaRDD<String> museumVisitorsData = museumVisitorsLines
                 .filter(line -> !line.equals(museumVisitorsHeader));
 
-        JavaPairRDD<String, Double> summedPerMonthsMuseumVisitors = museumVisitorsData.mapToPair(new PairFunction<String, String, Double>() {
+        //produce pairs of the year as key and the whole row for each as value
+        JavaPairRDD<String, Double> summedPerYearsMuseumVisitors = museumVisitorsData.mapToPair(new PairFunction<String, String, Double>() {
             @Override
             public Tuple2<String, Double> call(String line) throws Exception {
-                String[] lineTokens = line.split(",");
-                String key = lineTokens[0].split("-")[0];
+                String[] rowAttributes = line.split(",");
+                String key = rowAttributes[0].split("-")[0];
                 Double value = 0d;
-                for (int tokenIndex = 1; tokenIndex < lineTokens.length; tokenIndex++) {
-                    if (!lineTokens[tokenIndex].isEmpty())
-                        value += Double.parseDouble(lineTokens[tokenIndex]);
+                for (int tokenIndex = 1; tokenIndex < rowAttributes.length; tokenIndex++) {
+                    if (!rowAttributes[tokenIndex].isEmpty())
+                        value += Double.parseDouble(rowAttributes[tokenIndex]);
                 }
                 return new Tuple2<>(key, value);
             }
@@ -96,7 +97,7 @@ public class LAMuseumVisitorsAndCrimes extends SparkInitializer {
 
         //Grouped visitors by year
         JavaPairRDD<String, Iterable<Double>> groupedMusuemVisitorsByYear =
-                summedPerMonthsMuseumVisitors.groupByKey();
+                summedPerYearsMuseumVisitors.groupByKey();
 
         JavaPairRDD<String, Double> summedPerYearMuseumVisitors = groupedMusuemVisitorsByYear.mapValues(values -> Lambda.sum(values).doubleValue());
 

@@ -5,15 +5,23 @@ This repository contains an experiment in which I tested the correlation between
 In this experiment I used two datasets from open-access repositories in order to get the information needed for my experiment. Those data sets were:
 1. LA_Crime_Data_from_2010_to_Present.csv
 2. LA_museum_visitors.csv
+
 Both input and generated data were preserved on Zenodo using this DOI citation: [10.5282/dmp.LAexperiment.data](https://doi.org/10.5282/dmp.LAexperiment.data)
 
 ## Prerequisites
 This experiment was performed using JavaSE 11.0 with Apache Spark 2.4 "It's a Maven project, so don't worry about versions". Other libraries were used and will be listed in Prerequisites section.
 
-* [Dataset Repository](https://bitbucket.org/hasanalkhatib/datastewardship_datasets/src)
+In order to setup and run this experiment, you can follow the next steps:
+
+1. Clone this repository to your machine
 ```
-git clone [Dataset Repository URL]
+git clone https://github.com/HasanKhatib/DS-CrimesAndMuseumsInLA.git
 ```
+2. Clone dataset repository from Bitbucket to the same project folder, it will add a folder named laexperiment_data
+```
+git clone https://hasanalkhatib@bitbucket.org/hasanalkhatib/laexperiment_data.git
+```
+Or, just download data using the DOI citation from above to laexperiment_data folder.
 
 ## Experiment Process
 

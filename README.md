@@ -11,17 +11,20 @@ Both input and generated data were preserved on Zenodo using this DOI citation: 
 ## Prerequisites
 This experiment was performed using JavaSE 11.0 with Apache Spark 2.4 "It's a Maven project, so don't worry about versions". Other libraries were used and will be listed in Prerequisites section.
 
+## Setup and Running
 In order to setup and run this experiment, you can follow the next steps:
 
 1. Clone this repository to your machine
 ```
 git clone https://github.com/HasanKhatib/DS-CrimesAndMuseumsInLA.git
 ```
-2. Clone dataset repository from Bitbucket to the same project folder, it will add a folder named laexperiment_data
+2. Clone dataset repository from Bitbucket to the same project folder, it will add a folder named `laexperiment_data`
 ```
 git clone https://hasanalkhatib@bitbucket.org/hasanalkhatib/laexperiment_data.git
 ```
-Or, just download data using the DOI citation from above to laexperiment_data folder.
+Or, just download data using the DOI citation from above to `laexperiment_data` folder.
+3. Generate sources from the maven `pom.xml` file
+4. Run it!
 
 ## Experiment Process
 

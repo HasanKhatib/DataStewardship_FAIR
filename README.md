@@ -28,6 +28,9 @@ Or, just download data using the DOI citation from above to `laexperiment_data` 
 
 4. Run it!
 
+### Run using Docker
+You can also find a docker file in `target/docker` document in the project. Use it to build Docker image.
+
 ## Experiment Process
 In the next UML, you will notice the flow of data in the experiment and how the output CSV file was generated. In general, the steps of the process were as follows:
 1. Read CSV files as arrays of string.

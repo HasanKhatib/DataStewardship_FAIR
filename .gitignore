@@ -1,8 +1,10 @@
 *.csv
 *.iml
 
-target/*
-target/
+target/classes
+target/generated-sources
+target/maven-archiver
+target/maven-status
 
 .idea/
 .idea/*

@@ -7,9 +7,41 @@
     <groupId>tuwien</groupId>
     <artifactId>data-stewardship</artifactId>
     <version>1.0-SNAPSHOT</version>
-
+    <packaging>jar</packaging>
     <build>
         <plugins>
+            <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <configuration>
+                    <baseImage>java:11</baseImage>
+                    <imageName>10.10.8.175:5000/${artifactId}:${project.version}</imageName>
+                    <dockerHost>http://localhost:2375</dockerHost>
+                    <dockerDirectory>target/docker</dockerDirectory>
+                    <resources>
+                        <resource>
+                            <targetPath>/</targetPath>
+                            <directory>${project.build.directory}</directory>
+                            <include>*.zip</include>
+                        </resource>
+                    </resources>
+
+                    <!--<imageName>dsBoot</imageName>-->
+                    <!--<baseImage>java:11</baseImage>-->
+                    <!--<dockerHost>http://localhost:2375</dockerHost>-->
+                    <!--<entryPoint>["java", "-jar", "/${project.build.finalName}.jar"]</entryPoint>-->
+                    <!--&lt;!&ndash; copy the service's jar file from target into the root directory of the image &ndash;&gt;-->
+                    <!--<resources>-->
+                        <!--<resource>-->
+                            <!--<targetPath>/</targetPath>-->
+                            <!--<directory>${project.build.directory}</directory>-->
+                            <!--<include>${project.build.finalName}.jar</include>-->
+                        <!--</resource>-->
+                    <!--</resources>-->
+                    <!---->
+                </configuration>
+            </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>

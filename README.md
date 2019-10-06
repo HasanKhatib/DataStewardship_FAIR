@@ -6,7 +6,7 @@ n this experiment, I used two datasets from open-access repositories in order to
 1. LA_Crime_Data_from_2010_to_Present.csv
 2. LA_museum_visitors.csv
 
-Both input and generated data were preserved on Zenodo using this DOI citation: [10.5282/dmp.LAexperiment.data](https://doi.org/10.5282/dmp.LAexperiment.data)
+Both input and generated data were preserved on Zenodo using this DOI citation: [10.5282/dmp.LAexperiment.data](https://zenodo.org/record/2647620/files/LAExperiment_data.zip)
 
 ## Prerequisites
 This experiment was performed using JavaSE 11.0 with Apache Spark 2.4 "It's a Maven project, so don't worry about versions". Other libraries were used and will be listed in the Prerequisites section.
